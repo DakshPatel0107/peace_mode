@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Peace mode</string>
+    <string name="todo">TODO</string>
+    <string name="analog_clock_description">Analog clock face displaying time</string>
+    <string name="sos_number_text">SOS Number:</string>
+    <string name="sos_number_hint">Enter phone number</string>
+    <string name="sos_call_button_text">Call</string>
+
+</resources>

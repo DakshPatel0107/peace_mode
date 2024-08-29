@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/timerback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="340dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/left_arrow" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/numberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter number to allow ringing"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button"
+        android:text="Save Number" />
+
+    <TextView
+        android:id="@+id/savedNumberTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saved Number: "
+        android:paddingTop="16dp" />
+</LinearLayout>

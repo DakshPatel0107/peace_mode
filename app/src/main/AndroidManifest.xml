@@ -1,0 +1,95 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.peacemode">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:name=".PeaceMode"
+        android:allowBackup="true"
+        android:icon="@mipmap/mute"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/mute"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PeaceMode"
+        tools:targetApi="31">
+
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".CalendarActivity"
+            android:exported="true"/>
+
+        <activity android:name=".first_page"
+            android:exported="true"/>
+
+        <receiver android:name=".BroadcastReceiver"/>
+
+        <receiver android:name=".TaskReminderReceiver" />
+
+        <activity android:name=".profileactivity"
+            android:exported="true"/>
+
+        <activity android:name=".SetTimerActivity"
+            android:exported="true"/>
+
+        <activity android:name=".LocationDetailsActivity"
+            android:exported="true"/>
+
+        <activity android:name=".SilentModeHandler"
+            android:exported="true"/>
+
+        <activity android:name=".ratinactivity"
+            android:exported="true"/>
+
+        <activity android:name=".HostActivity"
+            android:exported="true"/>
+
+        <activity android:name=".HelpActivity"
+            android:exported="true"/>
+
+
+        <activity android:name=".SettingsActivity"
+            android:exported="true"/>
+
+        <activity android:name=".DisplayActivity"
+            android:exported="true"/>
+
+        <activity android:name=".LanguageRegionActivity"
+            android:exported="true"/>
+
+        <activity android:name=".AttendanceActivity"
+            android:exported="true"/>
+
+        <activity android:name=".ViewAttendanceActivity"
+            android:exported="true"/>
+
+        <activity android:name=".ViewAllAttendanceActivity"
+            android:exported="true"/>
+
+        <activity android:name=".LoginActivity"/>
+
+        <activity android:name=".SignupActivity"/>
+
+
+    </application>
+
+</manifest>
