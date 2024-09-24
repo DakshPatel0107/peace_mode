@@ -11,12 +11,14 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Task description"
+        android:textColor="@color/Text"
         android:textSize="16sp" />
 
     <Button
         android:id="@+id/deleteTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/Text"
         android:backgroundTint="@color/button"
         android:text="Delete" />
 </LinearLayout>

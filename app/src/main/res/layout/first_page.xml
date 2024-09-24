@@ -28,8 +28,9 @@
 
         <TextView
             android:id="@id/user_name"
-            android:layout_width="110dp"
+            android:layout_width="89dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/Text"
             android:hint="NAME"
             android:paddingTop="100dp"
             android:textSize="15sp"
@@ -39,6 +40,7 @@
             android:id="@+id/user_details"
             android:layout_width="157dp"
             android:layout_height="84dp"
+            android:textColor="@color/Text"
             android:hint="PROFESSION"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -63,6 +65,7 @@
         android:paddingStart="40dp"
         android:paddingTop="25dp"
         android:text="PEACEMODE"
+        android:textColor="@color/Text"
         android:textSize="15sp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints,RtlSymmetry">
@@ -98,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="#FF22B2FF"
+            app:cardBackgroundColor="@color/button"
             app:cardCornerRadius="15dp"
             app:cardElevation="4dp">
 
@@ -121,7 +124,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="#FF22B2FF"
+            app:cardBackgroundColor="@color/button"
             app:cardCornerRadius="15dp"
             app:cardElevation="4dp">
 
@@ -205,7 +208,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="#FF22B2FF"
+            app:cardBackgroundColor="@color/button"
             app:cardCornerRadius="15dp"
             app:cardElevation="4dp">
 
@@ -227,7 +230,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="#FF22B2FF"
+            app:cardBackgroundColor="@color/button"
             app:cardCornerRadius="15dp"
             app:cardElevation="4dp">
 
@@ -270,12 +273,14 @@
         android:layout_height="wrap_content"
         android:paddingLeft="15dp"
         android:text="Task for today"
+        android:textColor="@color/Text"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/firstrow" />
 
     <ListView
         android:id="@+id/taskListView"
+        android:textColor="@color/Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/firstrow"

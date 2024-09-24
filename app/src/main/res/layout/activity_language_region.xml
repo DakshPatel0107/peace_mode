@@ -27,20 +27,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Language and Region"
+        android:textColor="@color/Text"
         android:textSize="24sp"
         android:layout_marginBottom="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Select Language"
-        android:textSize="20sp"
-        android:layout_marginBottom="8dp" />
+        android:textColor="@color/Text"
+        android:textSize="20sp" />
 
     <Spinner
         android:id="@+id/language_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/Text"
         android:clickable="true"
         android:focusable="true" />
 
@@ -48,6 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Region"
+        android:textColor="@color/Text"
         android:textSize="20sp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp" />
@@ -56,6 +63,10 @@
         android:id="@+id/region_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/Text"
         android:clickable="true"
         android:focusable="true" />
 
@@ -63,6 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Time Format"
+        android:textColor="@color/Text"
         android:textSize="20sp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp" />
@@ -71,6 +83,10 @@
         android:id="@+id/time_format_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/Text"
         android:clickable="true"
         android:focusable="true" />
 
@@ -79,6 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
+        android:textColor="@color/Text"
         android:text="Save Preferences"
         android:layout_marginTop="24dp"
         android:padding="12dp" />

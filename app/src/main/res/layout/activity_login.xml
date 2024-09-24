@@ -76,7 +76,7 @@
         android:layout_marginHorizontal="16dp"
         android:background="@color/button"
         android:text="Sign In"
-        android:textColor="@color/black"
+        android:textColor="@color/Text"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

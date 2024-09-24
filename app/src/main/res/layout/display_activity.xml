@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Theme and Display"
+        android:textColor="@color/Text"
         android:textSize="24sp"
         android:layout_marginBottom="16dp" />
 
@@ -40,12 +41,14 @@
             android:id="@+id/light_mode_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Text"
             android:text="Light Mode" />
 
         <RadioButton
             android:id="@+id/dark_mode_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Text"
             android:text="Dark Mode" />
     </RadioGroup>
 

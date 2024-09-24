@@ -35,12 +35,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
+        android:textColor="@color/Text"
         android:text="Add Task" />
 
     <ListView
         android:id="@+id/taskListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:textColor="@color/Text"/>
 
 </LinearLayout>

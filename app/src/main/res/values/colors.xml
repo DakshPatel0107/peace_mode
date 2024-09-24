@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="button">#FF22B2FF</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="button">@color/backgroundColor</color>
+    <color name="white">#737272</color>
     <color name="backgroundColor">#F5F5F5</color>
     <color name="textColorPrimary">#212121</color>
     <color name="textColorSecondary">#757575</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorAccentDark">#C2185B</color>
+    <color name="Text">#FF000000</color>
 
     <color name="green">#4CAF50</color>
     <color name="red">#F44336</color>
     <color name="transparent">#00000000</color>
-
+    <color name="mapboxGrayLight">#C6D2E1</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

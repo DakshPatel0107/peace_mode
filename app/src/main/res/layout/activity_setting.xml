@@ -43,6 +43,7 @@
                 android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_weight="1"
+                android:textColor="@color/Text"
                 android:text="Profile"
                 android:textSize="20sp"/>
 
@@ -146,6 +147,7 @@
                 android:id="@+id/theme_display_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/Text"
                 android:layout_weight="1"
                 android:text="Theme and Display"
                 android:textSize="20sp" />
@@ -177,6 +179,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/Text"
                 android:text="App Information and Help"
                 android:textSize="20sp" />
 
@@ -204,6 +207,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Language and Region"
+                android:textColor="@color/Text"
                 android:textSize="20sp" />
 
 
@@ -230,6 +234,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/Text"
                 android:text="Rate the app"
                 android:textSize="20sp" />
 
@@ -255,6 +260,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/Text"
                 android:text="Share the App with Friends"
                 android:textSize="20sp" />
 
@@ -280,6 +286,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/Text"
                 android:text="Logout"
                 android:textSize="20sp" />
 

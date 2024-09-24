@@ -29,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="USER GUIDE"
+        android:textColor="@color/Text"
         android:textStyle="bold"/>
 
     <LinearLayout
@@ -42,6 +43,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:backgroundTint="@color/button"
+            android:textColor="@color/Text"
             android:text="Contact us" />
 
         <Button
@@ -49,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:textColor="@color/Text"
             android:backgroundTint="@color/button"
             android:text="Update Check" />
 

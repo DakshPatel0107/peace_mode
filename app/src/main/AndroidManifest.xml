@@ -6,6 +6,7 @@
         android:name="android.hardware.telephony"
         android:required="false" />
 
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
@@ -15,6 +16,13 @@
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
 
 
     <application
@@ -27,6 +35,10 @@
         android:theme="@style/Theme.PeaceMode"
         tools:targetApi="31">
 
+        <meta-data
+            android:name="com.mapbox.token"
+            android:value="@string/mapbox_access_token" />
+
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -34,6 +46,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".com.example.peacemode.LocationService"
+            android:exported="true"
+            android:permission="TODO" />
 
         <activity android:name=".CalendarActivity"
             android:exported="true"/>
@@ -51,7 +74,7 @@
         <activity android:name=".SetTimerActivity"
             android:exported="true"/>
 
-        <activity android:name=".LocationDetailsActivity"
+        <activity android:name=".SetLocationActivity"
             android:exported="true"/>
 
         <activity android:name=".SilentModeHandler"

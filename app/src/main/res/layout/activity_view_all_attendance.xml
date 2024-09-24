@@ -30,13 +30,15 @@
         android:layout_height="wrap_content"
         android:text="Select Date"
         android:layout_gravity="center"
+        android:textColor="@color/Text"
         android:textSize="20sp"
         android:textStyle="bold"/>
 
     <DatePicker
         android:id="@+id/date_picker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:calendarTextColor="@color/Text"/>
 
     <LinearLayout
         android:id="@+id/attendance_list_layout"

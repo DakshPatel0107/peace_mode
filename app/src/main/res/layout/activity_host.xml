@@ -50,7 +50,7 @@
                 android:id="@+id/user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#0B0808"
+                android:textColor="@color/Text"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
                 android:id="@+id/user_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
+                android:textColor="@color/Text"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -69,6 +69,7 @@
         android:id="@+id/department_name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/Text"
         android:hint="Enter department name"
         android:padding="16dp" />
 
@@ -77,6 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
+        android:textColor="@color/Text"
         android:text="Add Department" />
 
     <!-- CardView container for departments -->
@@ -84,6 +86,7 @@
         android:id="@+id/department_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/Text"
         android:orientation="vertical"
         android:padding="16dp" />
 
@@ -92,11 +95,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
+        android:textColor="@color/Text"
         android:text="Manage Members" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/Text"
         android:text="ADD or REMOVE members form department"
         android:gravity="center"
         />

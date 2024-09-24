@@ -28,12 +28,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
-        android:text="View Attendance"/>
+        android:text="View Attendance"
+        android:textColor="@color/Text"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select Department"
+        android:textColor="@color/Text"
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center" />
@@ -41,29 +43,35 @@
     <Spinner
         android:id="@+id/department_spinner"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="16dp" />
 
     <LinearLayout
         android:id="@+id/attendance_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:textColor="@color/Text"
         android:orientation="vertical" />
 
     <TextView
         android:id="@+id/date_text_view"
         android:layout_width="wrap_content"
+        android:textColor="@color/Text"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Mark attendance for date: "
         android:textSize="10sp"
-        android:textColor="#000000" />
+        />
 
 
     <Button
         android:id="@+id/save_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/Text"
         android:backgroundTint="@color/button"
         android:text="Save Attendance" />
 
@@ -72,6 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
+        android:textColor="@color/Text"
         android:text="View Members Attendance"
         android:layout_below="@id/save_button"
         android:layout_marginTop="16dp"
@@ -82,6 +91,7 @@
         android:layout_height="wrap_content"
         android:text="Will able to see attendance of seleted department"
         android:textSize="10dp"
+        android:textColor="@color/Text"
         android:layout_gravity="center"/>
 
 

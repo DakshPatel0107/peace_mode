@@ -29,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select the Department"
+        android:textColor="@color/Text"
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"/>
@@ -36,7 +37,11 @@
     <Spinner
         android:id="@+id/department_spinner"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/Text"/>
 
     <CalendarView
         android:id="@+id/calendar_view"

@@ -50,6 +50,7 @@ class first_page : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.first_page)
 
+
         taskListView = findViewById(R.id.taskListView)
         profileImageView = findViewById(R.id.profile_image)
         userNameTextView = findViewById(R.id.user_name)
@@ -64,7 +65,10 @@ class first_page : AppCompatActivity() {
 
         // Other setup code
         setupUI()
+
     }
+
+
 
     private fun setupUI() {
         val settingImageView: ImageView = findViewById(R.id.setting)
@@ -132,7 +136,7 @@ class first_page : AppCompatActivity() {
 
         val locationImageView: ImageView = findViewById(R.id.location)
         locationImageView.setOnClickListener {
-            val intent = Intent(this, LocationDetailsActivity::class.java)
+            val intent = Intent(this, SetLocationActivity::class.java)
             startActivity(intent)
             this@first_page.overridePendingTransition(
                 R.anim.animate_card_enter,

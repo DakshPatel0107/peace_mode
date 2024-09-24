@@ -30,6 +30,7 @@
         android:text="RATING"
         android:textSize="25dp"
         android:textStyle="bold"
+        android:textColor="@color/Text"
         android:layout_gravity="center"
         android:paddingTop="20dp"/>
 
@@ -48,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your feedback"
+        android:textColor="@color/Text"
         android:inputType="textMultiLine"
         android:minLines="5"
         android:scrollbars="vertical" />
@@ -55,6 +57,7 @@
     <Button
         android:id="@+id/send_feedback_button"
         android:layout_width="wrap_content"
+        android:textColor="@color/Text"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/button"

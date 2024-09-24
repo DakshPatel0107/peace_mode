@@ -1,9 +1,13 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Peace mode</string>
     <string name="todo">TODO</string>
     <string name="analog_clock_description">Analog clock face displaying time</string>
     <string name="sos_number_text">SOS Number:</string>
     <string name="sos_number_hint">Enter phone number</string>
     <string name="sos_call_button_text">Call</string>
+    <string name="sk.eyJ1IjoiZGFrc2gyMjAxIiwiYSI6ImNtMHMwZnUwbDBhZXUya3BiY3AzcGtoMjcifQ.x0JNKbpS5oKlAwaSQeu1Ww" translatable="false"
+        tools:ignore="UnusedResources">pk.eyJ1IjoiZGFrc2gyMjAxIiwiYSI6ImNtMHMwNmtiZTBhaTAybHM5bGx6MXFucGMifQ.MyuEoKARYvkdjJ1ul73OLQ</string>
+    <string name="mapbox_access_token">sk.eyJ1IjoiZGFrc2gyMjAxIiwiYSI6ImNtMHMwZnUwbDBhZXUya3BiY3AzcGtoMjcifQ.x0JNKbpS5oKlAwaSQeu1Ww</string>
+
 
 </resources>

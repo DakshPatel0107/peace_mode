@@ -6,15 +6,20 @@ plugins {
 
 android {
     namespace = "com.example.peacemode"
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.peacemode"
-        minSdk = 24
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 
     buildTypes {
@@ -26,17 +31,20 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
         viewBinding = true
     }
-    compileSdk = 34
+
     buildToolsVersion = "34.0.0"
 }
 
@@ -47,15 +55,37 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.play.services.maps)
-    implementation ("de.hdodenhof:circleimageview:3.1.0")
-    implementation("com.squareup.picasso:picasso:2.71828")
-    implementation("com.google.firebase:firebase-bom:33.1.2")
+    implementation(libs.circleimageview)
+    implementation(libs.picasso)
+
+    // Firebase dependencies
+    implementation(libs.firebase.bom)
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.database.ktx)
     implementation(libs.firebase.storage.ktx)
     implementation(libs.firebase.auth)
+
+    // Mapbox dependencies
+    implementation(libs.android)
+    implementation(libs.mapbox.search.android)
+    implementation("com.mapbox.maps:android:10.7.0")
+    implementation ("com.mapbox.search:autofill:2.3.0")
+    implementation ("com.mapbox.search:discover:2.3.0")
+    implementation ("com.mapbox.search:place-autocomplete:2.3.0")
+    implementation ("com.mapbox.search:offline:2.3.0")
+    implementation ("com.mapbox.search:mapbox-search-android:2.3.0")
+    implementation ("com.mapbox.search:mapbox-search-android-ui:2.3.0")
+    implementation ("com.google.android.gms:play-services-location:18.0.0")
+
+
+
+    // Other dependencies
     implementation(libs.androidx.recyclerview)
+    implementation(libs.play.services.location)
+    implementation(libs.firebase.messaging.ktx)
+
+    // Testing dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
-
 }
+
