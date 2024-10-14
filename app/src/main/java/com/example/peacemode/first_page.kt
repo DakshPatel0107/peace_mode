@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.PopupMenu
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -37,6 +38,7 @@ class first_page : AppCompatActivity() {
         const val REQUEST_ALARM_PERMISSION = 1
     }
 
+    private lateinit var progressBar: ProgressBar
     private lateinit var taskListView: ListView
     private lateinit var profileImageView: CircleImageView
     private lateinit var userNameTextView: TextView
@@ -55,6 +57,7 @@ class first_page : AppCompatActivity() {
         profileImageView = findViewById(R.id.profile_image)
         userNameTextView = findViewById(R.id.user_name)
         userDetailsTextView = findViewById(R.id.user_details)
+        progressBar = findViewById(R.id.progressBar)
 
         databaseReference = FirebaseDatabase.getInstance().getReference("users")
 
@@ -65,7 +68,21 @@ class first_page : AppCompatActivity() {
 
         // Other setup code
         setupUI()
+        loadData()
 
+    }
+
+    private fun loadData() {
+        // Show the ProgressBar
+        progressBar.visibility = View.VISIBLE
+
+        // Simulate a background task using a Handler
+        android.os.Handler().postDelayed({
+            // Hide the ProgressBar after task completion
+            progressBar.visibility = View.GONE
+
+            // Update UI or perform other operations
+        }, 3000) // Simulating a 3-second task
     }
 
 

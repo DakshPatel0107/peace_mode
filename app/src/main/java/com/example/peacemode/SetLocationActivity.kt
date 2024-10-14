@@ -202,7 +202,7 @@ class SetLocationActivity : AppCompatActivity() {
 
             dataSnapshot.children.forEach { departmentSnapshot ->
                 val department = departmentSnapshot.getValue(HostActivity.Department::class.java)
-                if (department?.createdBy == currentUserEmail) {
+                if (department?.members?.containsKey(currentUserEmail?.replace(".", ",")) == true) {
                     if (department != null) {
                         department.name?.let { departmentNames.add(it) }
                     }
@@ -233,15 +233,25 @@ class SetLocationActivity : AppCompatActivity() {
         selectedDepartmentId?.let { departmentId ->
             currentMarker?.let { marker ->
                 val location = marker.point
-                databaseReference.child(departmentId).child("location").setValue(
-                    mapOf(
-                        "latitude" to location.latitude(),
-                        "longitude" to location.longitude()
-                    )
-                ).addOnSuccessListener {
-                    Toast.makeText(this, "Location saved for department", Toast.LENGTH_SHORT).show()
-                }.addOnFailureListener {
-                    Toast.makeText(this, "Failed to save location", Toast.LENGTH_SHORT).show()
+                databaseReference.child(departmentId).get().addOnSuccessListener { snapshot ->
+                    val department = snapshot.getValue(HostActivity.Department::class.java)
+                    if (department?.createdBy == currentUserEmail) {
+                        databaseReference.child(departmentId).child("location").setValue(
+                            mapOf(
+                                "latitude" to location.latitude(),
+                                "longitude" to location.longitude()
+                            )
+                        ).addOnSuccessListener {
+                            Toast.makeText(this, "Location updated for department", Toast.LENGTH_SHORT).show()
+                            // Refresh the markers on the map
+                            pointAnnotationManager.deleteAll()
+                            showDepartmentMarkers()
+                        }.addOnFailureListener {
+                            Toast.makeText(this, "Failed to update location", Toast.LENGTH_SHORT).show()
+                        }
+                    } else {
+                        Toast.makeText(this, "Only the creator can update the department location", Toast.LENGTH_SHORT).show()
+                    }
                 }
             } ?: run {
                 Toast.makeText(this, "Please place a marker on the map", Toast.LENGTH_SHORT).show()
@@ -490,20 +500,21 @@ class SetLocationActivity : AppCompatActivity() {
         databaseReference.get().addOnSuccessListener { dataSnapshot ->
             dataSnapshot.children.forEach { departmentSnapshot ->
                 val department = departmentSnapshot.getValue(HostActivity.Department::class.java)
-                val location = departmentSnapshot.child("location")
-                val latitude = location.child("latitude").value as? Double
-                val longitude = location.child("longitude").value as? Double
+                if (department?.members?.containsKey(currentUserEmail?.replace(".", ",")) == true) {
+                    val location = departmentSnapshot.child("location")
+                    val latitude = location.child("latitude").value as? Double
+                    val longitude = location.child("longitude").value as? Double
 
-                if (latitude != null && longitude != null && department != null) {
-                    val point = Point.fromLngLat(longitude, latitude)
-                    addDepartmentMarker(point, department.name ?: "Unnamed Department")
+                    if (latitude != null && longitude != null && department != null) {
+                        val point = Point.fromLngLat(longitude, latitude)
+                        addDepartmentMarker(point, department.name ?: "Unnamed Department")
+                    }
                 }
             }
         }.addOnFailureListener {
             Toast.makeText(this, "Failed to load departments", Toast.LENGTH_SHORT).show()
         }
     }
-
 
     // Lifecycle methods
     override fun onStart() {
